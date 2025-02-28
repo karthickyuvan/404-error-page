@@ -1,0 +1,133 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins',sans-serif;
+    background: #F5E6C4;
+}
+
+.errorpage_content{
+    display: flex;
+    flex-direction: column; /* Stack children (h1, img, content) vertically */
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    
+}
+
+.errorpage_content  h1{
+    font-size: 150px;
+    text-align: center;
+    color: #A7C957;
+  margin-top: -300px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */}
+.img
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+    left: 490px;
+    translate: transform(-50%,-50%);
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.4)); /* Soft shadow */
+    /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.9); Adds a soft shadow */
+}
+.content {
+    display: flex;
+    flex-direction: column; /* Stack message & button */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Adjust space below image */
+}
+
+.content .message {
+    font-size: 20px;
+    color: #57310d;
+    text-align: center;
+     margin-bottom: 15px; /* Space between message and button */
+     position: absolute;
+     margin-top: 150px;
+}
+
+.content .btn {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #A7C957;
+    color: #fff;
+    border: none;
+    border-radius: 70px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    margin-top: 200px;
+}
+.shadow
+{
+    width: 500px;
+    height: 24px;
+    background-color: hsla(38, 21%, 19%, 16);
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 165px;
+    filter: blur(9px);
+    
+}
+.steam {
+    position: absolute;
+    top: 200px;
+    width: 130px;
+    height: 50px;
+    opacity: 0.5;
+    animation: steam-rise 3s infinite alternate;
+}
+@keyframes steam-rise {
+    0% { transform: translateY(0px); opacity: 0.5; }
+    100% { transform: translateY(-20px); opacity: 0; }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    25% { transform: translate(-1px, -2px) rotate(-1deg); }
+    50% { transform: translate(-3px, 0px) rotate(1deg); }
+    75% { transform: translate(3px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(-1deg); }
+}
+
+.shake-img:hover {
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .errorpage_content h1 {
+        font-size: 190px;
+        margin-top: -270px;
+    }
+    .content .message {
+        font-size: 24px;
+        margin-top: 130px;
+        padding: 10px 19px;
+    }
+    .content .btn {
+        font-size: 24px;
+        margin-top: 230px;
+    }
+    .img{
+        top: 130px;
+        left: 50px;
+    }
+    .shadow
+    {
+        margin-top: 175px;
+    }
+
+    .errorpage_content{
+        margin-top: 70px;
+    }
+}
